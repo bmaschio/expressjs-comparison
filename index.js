@@ -4,7 +4,7 @@ const app = express()
 
 const port = 8080
 
-app.post('/api/orders/:id' ,(req, res)=>{
+app.post('/api/orders' ,(req, res)=>{
     const responseBody= {
         id : 1,
         orderRefCode: "AAAA",
@@ -16,7 +16,7 @@ app.post('/api/orders/:id' ,(req, res)=>{
 
 app.get('/api/orders/:id' ,(req, res)=>{
     const responseBody= {
-        id : 1,
+        id : parseInt(req.params.id),
         orderRefCode: "AAAA",
         userId: 'usr01'
     }
